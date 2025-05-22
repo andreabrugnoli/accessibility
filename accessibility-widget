@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio Implementazione Pulsante Accessibilità</title>
+    
+    <!-- Includi lo script di accessibilità -->
+    <script src="accessibility.js"></script>
+    
+    <!-- Stile base della pagina per demo -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        a {
+            color: #0066CC;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .demo-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+        }
+        
+        .note {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-left: 4px solid #0066CC;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Esempio di Implementazione del Pulsante di Accessibilità</h1>
+        <p>Questa pagina dimostra l'implementazione del pulsante di accessibilità conforme alle normative europee.</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Caratteristiche del Widget di Accessibilità</h2>
+            <ul>
+                <li>Regolazione delle dimensioni del testo</li>
+                <li>Modalità alto contrasto</li>
+                <li>Font facilitato per la dislessia</li>
+                <li>Evidenziazione del cursore e dei link</li>
+                <li>Memorizzazione delle preferenze dell'utente</li>
+                <li>Compatibilità con dispositivi mobili e screen reader</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Come Utilizzare il Widget</h2>
+            <p>Per accedere alle funzionalità di accessibilità, fai clic sul pulsante blu nell'angolo in basso a destra dello schermo.</p>
+            <p>Puoi personalizzare la tua esperienza scegliendo tra le varie opzioni offerte nel menu.</p>
+            
+            <div class="note">
+                <strong>Nota:</strong> Le tue preferenze verranno salvate per le future visite a questo sito.
+            </div>
+        </section>
+        
+        <section>
+            <h2>Normative di Riferimento</h2>
+            <p>Questo widget è conforme alle seguenti normative europee sull'accessibilità:</p>
+            <ul>
+                <li>Direttiva UE 2016/2102</li>
+                <li>Normativa EN 301 549</li>
+                <li>WCAG 2.1 livello AA</li>
+            </ul>
+            <p>Per maggiori informazioni sull'accessibilità web, visita il <a href="https://www.agid.gov.it/it/design-servizi/accessibilita">sito dell'AgID</a>.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Esempio di Implementazione</p>
+    </footer>
+    
+    <!-- Il pulsante di accessibilità verrà iniettato qui automaticamente -->
+</body>
+</html>
