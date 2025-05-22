@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Widget Accessibilità | Inclusività Digitale</title>
+    <meta name="description" content="Demo del widget di accessibilità conforme alle normative europee. Migliora l'inclusività del tuo sito web.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E♿%3C/text%3E%3C/svg%3E">
+    
+    <!-- Stili per la demo -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0066CC, #004499);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .demo-notice {
+            background-color: #e7f3ff;
+            border: 2px solid #0066CC;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .demo-notice h2 {
+            color: #0066CC;
+            margin-top: 0;
+        }
+        
+        .demo-notice .arrow {
+            font-size: 2rem;
+            color: #0066CC;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            color: #0066CC;
+            margin-bottom: 15px;
+        }
+        
+        .demo-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+        
+        .demo-content h2 {
+            color: #333;
+            border-bottom: 3px solid #0066CC;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .instruction-list {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .instruction-list ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .instruction-list li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .compliance-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        
+        .badge {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .test-section {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .test-section h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        .test-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .test-button {
+            background-color: #0066CC;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .test-button:hover {
+            background-color: #004499;
+        }
+        
+        .lorem-text {
+            text-align: justify;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: #66ccff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .demo-content {
+                padding: 25px;
+            }
+            
+            .test-buttons {
+                flex-direction: column;
+            }
+            
+            .test-button {
+                width: 100%;
+            }
+        }
+        
+        /* Stili per evidenziare gli elementi accessibili */
+        .accessible-link {
+            color: #0066CC;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        
+        .accessible-link:hover, .accessible-link:focus {
+            background-color: #e7f3ff;
+            outline: 2px solid #0066CC;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌐 Widget di Accessibilità Web</h1>
+            <p>Inclusività digitale conforme alle normative europee</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="demo-notice">
+                <h2>🚀 Prova il Widget in Azione!</h2>
+                <p>Cerca il pulsante blu nell'angolo in basso a destra dello schermo</p>
+                <div class="arrow">↘️</div>
+                <p><strong>Clicca sul pulsante per aprire il menu di accessibilità</strong></p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Regolazione Testo</h3>
+                    <p>Aumenta o diminuisci le dimensioni del testo per una lettura ottimale. Le impostazioni vengono salvate automaticamente per le future visite.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3>Alto Contrasto</h3>
+                    <p>Attiva la modalità alto contrasto per migliorare la leggibilità, particolarmente utile per utenti ipovedenti o con problemi di vista.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📖</span>
+                    <h3>Font per Dislessia</h3>
+                    <p>Utilizza il font OpenDyslexic, appositamente progettato per facilitare la lettura a persone con dislessia e difficoltà di apprendimento.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🖱️</span>
+                    <h3>Navigazione Facilitata</h3>
+                    <p>Evidenzia il cursore e i link per migliorare l'orientamento e la navigazione all'interno delle pagine web.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💾</span>
+                    <h3>Preferenze Salvate</h3>
+                    <p>Tutte le tue impostazioni vengono automaticamente salvate nel browser per mantenere la tua esperienza personalizzata.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Compatibilità Totale</h3>
+                    <p>Funziona perfettamente su tutti i dispositivi e browser, ed è completamente compatibile con screen reader e tecnologie assistive.</p>
+                </div>
+            </div>
+            
+            <div class="demo-content">
+                <h2>Come Testare il Widget</h2>
+                
+                <div class="instruction-list">
+                    <ol>
+                        <li>Trova il <strong>pulsante blu</strong> nell'angolo in basso a destra</li>
+                        <li>Clicca sul pulsante per aprire il menu di accessibilità</li>
+                        <li>Prova le diverse opzioni disponibili</li>
+                        <li>Osserva come cambiano testo, colori e navigazione</li>
+                        <li>Ricarica la pagina per vedere che le preferenze sono salvate</li>
+                    </ol>
+                </div>
+                
+                <div class="test-section">
+                    <h3>🧪 Area di Test</h3>
+                    <p>Usa quest'area per testare le funzionalità del widget:</p>
+                    
+                    <div class="test-buttons">
+                        <button class="test-button">Pulsante di Prova</button>
+                        <button class="test-button">Altro Pulsante</button>
+                        <button class="test-button">Test Interazione</button>
+                    </div>
+                    
+                    <div class="lorem-text">
+                        <h4>Testo di Esempio per Test di Leggibilità</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                        <p>Questo paragrafo contiene diversi <a href="#" class="accessible-link">link di esempio</a> che puoi utilizzare per testare l'evidenziazione dei collegamenti. Prova ad attivare la funzione "Evidenzia link" dal widget di accessibilità.</p>
+                        
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-content">
+                <h2>📋 Conformità alle Normative</h2>
+                <p>Questo widget di accessibilità rispetta i più alti standard europei e internazionali:</p>
+                
+                <div class="compliance-badges">
+                    <span class="badge">✅ Direttiva UE 2016/2102</span>
+                    <span class="badge">✅ EN 301 549</span>
+                    <span class="badge">✅ WCAG 2.1 AA</span>
+                    <span class="badge">✅ ARIA Compliant</span>
+                </div>
+                
+                <p>L'implementazione di questo widget aiuta il tuo sito web a:</p>
+                <ul>
+                    <li><strong>Evitare sanzioni</strong> previste per la non conformità</li>
+                    <li><strong>Raggiungere un pubblico più ampio</strong> includendo persone con diverse abilità</li>
+                    <li><strong>Migliorare la reputazione</strong> del brand come attento all'inclusività</li>
+                    <li><strong>Ottimizzare la SEO</strong> grazie a una migliore struttura del codice</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Widget di Accessibilità Web - Demo Funzionante</p>
+            <div class="footer-links">
+                <a href="https://github.com/tuousername/accessibility-widget" target="_blank">📁 Repository GitHub</a>
+                <a href="mailto:tua@email.com">📧 Contatto</a>
+                <a href="https://www.agid.gov.it/it/design-servizi/accessibilita" target="_blank">ℹ️ Info Accessibilità</a>
+            </div>
+            <p><small>Conforme alle normative europee sull'accessibilità digitale</small></p>
+        </div>
+    </footer>
+    
+    <!-- Includi il widget di accessibilità -->
+    <script src="accessibility.js"></script>
+    
+    <!-- Script per la demo -->
+    <script>
+        // Aggiungi interattività ai pulsanti di test
+        document.querySelectorAll('.test-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Pulsante cliccato! Il widget di accessibilità migliora l\'esperienza per tutti gli utenti.');
+            });
+        });
+        
+        // Messaggio di benvenuto per la demo
+        console.log('🌐 Demo Widget Accessibilità caricata con successo!');
+        console.log('Cerca il pulsante blu nell\'angolo in basso a destra per iniziare.');
+    </script>
+</body>
+</html>
