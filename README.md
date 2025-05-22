@@ -255,15 +255,15 @@ if (window.AccessibilityWidget) {
 ## 📬 Contatti Professionali
 
 ### 📧 **Richieste Commerciali**
-**Email**: [tuo@email.com](mailto:tuo@email.com?subject=Richiesta%20Widget%20Accessibilità%20Professionale)
+**Email**: [hello@andreabrugnoli.it](mailto:hello@andreabrugnoli.it?subject=Richiesta%20Widget%20Accessibilità%20Professionale)
 
 **Oggetto suggerito**: "Richiesta Widget Accessibilità Professionale"
 
 ### 🌐 **Canali Ufficiali**
-- **💼 LinkedIn**: [Andrea Brugnoli - Digital Expert](https://linkedin.com/in/andreabrugnoli)
-- **📺 TV**: "Selfie School" - Ogni martedì su [Canale TV]
+- **💼 LinkedIn**: [Andrea Brugnoli - Digital Expert](https://linkedin.com/in/andrea-brugnoli)
+- **📺 TV**: "Selfie School" - Ogni mercoledì su TvA Vicenza (h 17.30)
 - **🎙️ Podcast**: "[La mia vita spaziale](https://www.andreabrugnoli.it/la-mia-vita-spaziale))" - Ogni venerdì
-- **📱 Social**: @AndreaBrugnoli su tutte le piattaforme
+- **📱 Social**: @abrugnoli su tutte le piattaforme
 
 ### ⚡ **Richiesta Preventivo Rapido**
 Includi nella tua richiesta:
@@ -343,7 +343,7 @@ Questo progetto è distribuito con **licenza MIT**. Puoi utilizzarlo liberamente
 
 **🌐 Rendere il web accessibile a tutti, un sito alla volta**
 
-[🚀 PROVA LA DEMO](https://andreabrugnoli.github.io/accessibility/) | [📧 CONTATTA L'ESPERTO](mailto:tuo@email.com?subject=Consulenza%20Accessibilità%20Web) | [⭐ LASCIA UNA STELLA](https://github.com/andreabrugnoli/accessibility)
+[🚀 PROVA LA DEMO](https://andreabrugnoli.github.io/accessibility/) | [📧 CONTATTA L'ESPERTO](mailto:hello@andreabrugnoli.it?subject=Consulenza%20Accessibilità%20Web) | [⭐ LASCIA UNA STELLA](https://github.com/andreabrugnoli/accessibility)
 
 ---
 
